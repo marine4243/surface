@@ -1,22 +1,44 @@
 <?php
 require_once("function.php");
-//afficheEntete();
-/*
-afficheLigne(4, 3);
-afficheLigne(2.5, 5);
-afficheLigne(6, 2);
+
+$sdb['piece'] = 'Salle de bain';
+$sdb['largeur'] = 5;
+$sdb['longueur'] = 3;
+$sdb['surface'] = calculSurface($sdb['largeur'],$sdb['longueur']);
+
+//print_r($sdb);
+
+$salon['piece'] = 'Salon';
+$salon['largeur'] = 7;
+$salon['longueur'] = 8;
+$salon['surface'] = calculSurface($salon['largeur'],$salon['longueur']);
+
+//print_r($salon);
+
+$cuisine['piece'] = 'Cuisine';
+$cuisine['largeur'] = 6;
+$cuisine['longueur'] = 9;
+$cuisine['surface'] = calculSurface($cuisine['largeur'],$cuisine['longueur']);
+
+//print_r($cuisine);
+
+$listePieces = [];
+$listePieces[0] = $sdb;
+$listePieces[1] = $salon;
+$listePieces[2] = $cuisine;
+
+//print_r($listePieces);
+
+
+afficheEntete();
+
+/*afficheLigne("Salon", 4 , 3);
+afficheLigne("salle de bains", 2.5, 5);
+afficheLigne("Cuisine", 6, 2);
 */
-$unePiece['piece'] = 'Salle de bain';
-$unePiece['largeur'] = 5;
-$unePiece['longueur'] = 3;
-$unePiece['surface'] = calculSurface($unePiece['largeur'],$unePiece['longueur']);
-print_r($unePiece);
-$uneAutrePiece['piece'] = 'Salon';
-$uneAutrePiece['largeur'] = 7;
-$uneAutrePiece['longueur'] = 8;
-$uneAutrePiece['surface'] = calculSurface($uneAutrePiece['largeur'],$uneAutrePiece['longueur']);
-print_r($uneAutrePiece);
-$listePieces = array();
-$listePieces[0] = $unePiece;
-$listePieces[1] = $uneAutrePiece;
-print_r($listePieces);
+
+foreach ($listePieces as $key => $value) {
+  //print_r($value);
+  //afficheLigne($value["piece"], $value["longueur"], $value["largeur"]);
+  afficheLigne($value);
+}

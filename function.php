@@ -1,18 +1,32 @@
 <?php
+
 function afficheEntete()
 {
-//  echo "  Longueur  |  Largeur  | Surface   |\n";
-  printf("| %9s | %9s | %9s |\n", "Longueur", "Largeur", "Surface");
+// echo "  Longueur  |  Largeur  | Surface   |\n";
+ printf("| %20s | %9s | %9s | %9s |\n","piece", "Longueur", "Largeur", "Surface");
 }
-function afficheLigne($long, $larg)
+
+
+//function afficheLigne($piece,$long, $larg)
+function afficheLigne($piece)
 {
-  if ( is_numeric($long) && is_numeric($larg) ) {
-    printf("| %9.2f | %9.2f | %9.2f |\n", $long, $larg, calculSurface($long, $larg));
+  if (
+    is_string($piece["piece"]) &&
+    is_numeric($piece["longueur"]) &&
+    is_numeric($piece["largeur"]) ) {
+
+     printf("| %20s | %9.2f | %9.2f | %9.2f |\n",
+     $piece["piece"],
+     $piece["longueur"],
+     $piece["largeur"], 
+     calculSurface($piece["longueur"], $piece["largeur"]));
   } else {
-    echo "Erreur données:". var_dump($long). var_dump($larg) . "\n" ;
+    echo "Erreur données:". var_dump($piece["longueur"]). var_dump($piece["largeur"]) . "\n" ;
   }
 //  echo " $long | $larg | ".calculSurface($long, $larg)." \n";
 }
+
+
 function calculSurface($long, $larg)
 {
   if ( is_numeric($long) && is_numeric($larg) ) {
