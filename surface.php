@@ -1,5 +1,5 @@
 <?php
-require_once("superfonctions.php");
+require_once("function.php");
 //afficheEntete();
 /*
 afficheLigne(4, 3);
