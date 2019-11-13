@@ -1,24 +1,24 @@
 <?php
 require_once("function.php");
 
-$sdb['piece'] = 'Salle de bain';
-$sdb['largeur'] = 5;
-$sdb['longueur'] = 3;
-$sdb['surface'] = calculSurface($sdb['largeur'],$sdb['longueur']);
+$sdb["piece"] = "Salle de bain";
+$sdb["largeur"] = 5;
+$sdb["longueur"] = 3;
+$sdb["surface"] = calculSurface($sdb["largeur"],$sdb["longueur"]);
 
 //print_r($sdb);
 
-$salon['piece'] = 'Salon';
-$salon['largeur'] = 7;
-$salon['longueur'] = 8;
-$salon['surface'] = calculSurface($salon['largeur'],$salon['longueur']);
+$salon["piece"] = "Salon";
+$salon["largeur"] = 7;
+$salon["longueur"] = 8;
+$salon["surface"] = calculSurface($salon["largeur"],$salon["longueur"]);
 
 //print_r($salon);
 
-$cuisine['piece'] = 'Cuisine';
-$cuisine['largeur'] = 6;
-$cuisine['longueur'] = 9;
-$cuisine['surface'] = calculSurface($cuisine['largeur'],$cuisine['longueur']);
+$cuisine["piece"] = "Cuisine";
+$cuisine["largeur"] = 6;
+$cuisine["longueur"] = 9;
+$cuisine["surface"] = calculSurface($cuisine["largeur"],$cuisine["longueur"]);
 
 //print_r($cuisine);
 
@@ -42,3 +42,18 @@ foreach ($listePieces as $key => $value) {
   //afficheLigne($value["piece"], $value["longueur"], $value["largeur"]);
   afficheLigne($value);
 }
+
+/*
+//differente ecriture
+$tab["prenom"] = "Marcel";
+$tab["nom"] = "Pagnol";*/
+
+$tab = ["prenom" => "Marcel" , "nom" => "Pagnol"];
+
+/*if (isset($tab["age"])) {
+  echo "La variable est definie \n";
+} else {
+  echo "La variable n'est pas definie\n";
+}
+*/
+afficheLigne($tab);
