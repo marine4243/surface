@@ -27,3 +27,9 @@ echo "boucle for \n";
 for ($i=0; $i < count($a) ; $i++) {
   echo "acces direct ".$i." element : ".$a[$i]. "\n";
 }
+
+echo "\n";
+echo "boucle foreach \n";
+foreach ($a as $key => $value) {
+  echo "acces direct ".$key." element : ".$value. "\n";
+}
