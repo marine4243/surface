@@ -36,3 +36,17 @@ echo "boucle foreach \n";
 foreach ($a as $key => $value) {
   echo "acces direct ".$key." element : ".$value. "\n";
 }
+
+
+/*------------- tableau associatif -------------------------------------------*/
+
+$b = [];
+$b["nom"] = "Dupont";
+$b["prenom"] = "Pierre";
+$b["age"] = 20;
+
+echo "\n";
+echo "boucle foreach \n";
+foreach ($b as $key => $value) {
+  echo "acces direct ".$key." element : ".$value. "\n";
+}
