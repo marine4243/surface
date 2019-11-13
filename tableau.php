@@ -15,7 +15,15 @@ print_r($a);
 // foreach, for, while
 
 $i = 0;
+
+echo "boucle while \n";
 while ($i < count($a)) {
   echo "acces direct ".$i." element : ".$a[$i]. "\n";
   $i++; //$i += 1, $i = $i + 1
+}
+
+echo "\n";
+echo "boucle for \n";
+for ($i=0; $i < count($a) ; $i++) {
+  echo "acces direct ".$i." element : ".$a[$i]. "\n";
 }
